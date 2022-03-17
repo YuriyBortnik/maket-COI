@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "brainscloud",
     "author": "brainscloud",
+    "scripts": {
+        "heroku-postbuild": "gulp watch"
+    },
     "devDependencies": {
         "browser-sync": "^2.27.7",
         "gulp": "^4.0.2",
