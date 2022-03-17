@@ -4,7 +4,7 @@
     "description": "brainscloud",
     "author": "brainscloud",
     "scripts": {
-        "deploy": "gh-pages -d dist"
+        "heroku-postbuild": "npm run build"
     },
     "devDependencies": {
         "browser-sync": "^2.27.7",
