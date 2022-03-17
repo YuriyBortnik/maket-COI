@@ -1,0 +1,10 @@
+.footer {
+  display: flex;
+  height: 100px;
+  background: #150433;
+}
+
+.copyrights {
+  color: #FFFFFF;
+  font-size: 12px;
+}

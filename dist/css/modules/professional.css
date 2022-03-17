@@ -1,0 +1,46 @@
+.professional {
+  background: #150433;
+  height: 922px;
+  max-width: 100%;
+}
+
+.professionalContainer {
+  display: flex;
+}
+
+.personalText {
+  color: #FFFFFF;
+}
+.personalText__title {
+  font-size: 50px;
+  font-family: "Georgia", sans-serif;
+  max-width: 505px;
+  padding-top: 196px;
+  line-height: 157%;
+}
+.personalText__text {
+  padding-top: 40px;
+  max-width: 380px;
+  font-size: 25px;
+  line-height: 157%;
+}
+.personalText .btn-slider {
+  margin-top: 70px;
+}
+
+.personal {
+  position: relative;
+}
+.personal__men {
+  position: absolute;
+  margin: 210px 0 0 82px;
+  height: 516px;
+  width: 544px;
+  background: url("/src/assets/images/rectangle.png") no-repeat center;
+}
+.personal__background {
+  margin: 160px 0 0 327px;
+  width: 350px;
+  height: 516px;
+  background: #F61067;
+}
