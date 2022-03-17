@@ -15,7 +15,6 @@
         "sass": "^1.49.8"
     },
     "dependencies": {
-        "gh-pages": "^3.2.3",
         "inputmask": "^5.0.7",
         "jquery": "^3.6.0",
         "owl.carousel": "^2.3.4",
