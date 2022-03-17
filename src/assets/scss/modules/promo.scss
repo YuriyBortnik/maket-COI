@@ -1,0 +1,55 @@
+@import "../helpers/variables";
+
+.promo {
+  height: 922px;
+  background: $footer;
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__content {
+    width: 40%;
+    color: $white;
+
+    &_title {
+      font-family: 'Georgia', sans-serif;
+      font-size: 50px;
+      line-height: 157%;
+    }
+
+    &_text {
+      padding-top: 40px;
+      max-width: 380px;
+      font-size: 25px;
+      line-height: 157%;
+    }
+  }
+
+  &__block {
+    position: relative;
+    width: 60%;
+
+    &_background {
+      margin: -90px 0 0 auto;
+      width: 350px;
+      height: 516px;
+      background: $navColor;
+    }
+
+    &_img {
+      position: absolute;
+      top: -40px;
+      right: 50px;
+      height: 516px;
+      width: 544px;
+      background: url("/src/assets/images/rectangle.png") no-repeat center;
+    }
+  }
+
+  .btn-primary {
+    margin-top: 70px;
+  }
+}

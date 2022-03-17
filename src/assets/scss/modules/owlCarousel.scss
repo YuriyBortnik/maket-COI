@@ -1,0 +1,82 @@
+@import "../helpers/variables";
+
+.owl-theme {
+  height: 100%;
+
+  .owl-nav {
+    position: absolute;
+    width: 100%;
+
+    .owl-prev,
+    .owl-next {
+      width: 48px;
+      height: 48px;
+      background: rgba(196, 196, 196, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.5) !important;
+      border-radius: 100%;
+
+      &:after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: 8px;
+        line-height: 0;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    .owl-prev {
+      &:after {
+        content: url("/src/assets/images/arrow-prev.png");
+      }
+    }
+
+    .owl-next {
+      position: absolute;
+      right: 0;
+
+      &:after {
+        content: url("/src/assets/images/arrow-next.png");
+      }
+    }
+  }
+
+  .owl-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    .owl-dot {
+      span {
+        display: block;
+        margin: 5px 13px;
+        width: 14px;
+        height: 14px;
+        background: $white;
+        border-radius: 30px;
+        transition: opacity 200ms ease;
+        -webkit-backface-visibility: visible;
+      }
+
+      &.active,
+      &:hover {
+        span {
+          background: $ping;
+        }
+      }
+    }
+  }
+}
+
+.owl-stage-outer {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}

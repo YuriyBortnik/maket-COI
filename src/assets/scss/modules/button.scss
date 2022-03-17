@@ -1,0 +1,17 @@
+@import "../helpers/variables";
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  height: 65px;
+  color: $white;
+  background-color: $navColor;
+  border-radius: 4px;
+  border: none;
+
+  &-slider {
+    margin-top: 50px;
+  }
+}

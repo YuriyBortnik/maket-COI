@@ -1,0 +1,80 @@
+@import "../helpers/variables";
+
+.help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 1160px;
+
+  .block1 {
+    position: relative;
+    margin-right: 75px;
+    width: calc(50% + 50px);
+
+    &__img {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 600px;
+      height: 866px;
+      background: url("/src/assets/images/4man.png") no-repeat center;
+    }
+
+    &__background {
+      width: 350px;
+      height: 870px;
+      background: $navColor;
+    }
+  }
+
+
+  .block2 {
+    margin-top: 92px;
+    width: calc(50% - 115px);
+
+
+    &__help {
+      font-size: 24px;
+      line-height: 37px;
+    }
+
+    &__title {
+      margin-bottom: 28px;
+      width: 400px;
+      font-family: 'Georgia', sans-serif;
+      font-size: 50px;
+      line-height: 78px;
+
+      &_color {
+        color: $navColor;
+      }
+    }
+  }
+
+  .btn-primary {
+    margin-top: 70px;
+  }
+}
+
+.form {
+  width: 444px;
+}
+
+.comment {
+  margin-top: 20px;
+  padding: 20px 30px;
+  width: 100%;
+  height: 178px !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: $grey;
+  border: 1px solid $grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+
+  &::placeholder {
+    color: $grey;
+  }
+}

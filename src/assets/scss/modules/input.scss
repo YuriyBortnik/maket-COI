@@ -1,0 +1,293 @@
+@import "../helpers/variables";
+
+//text type
+.input {
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 50px;
+
+  &__label {
+    position: absolute;
+    left: 30px;
+    top: 15px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: black;
+    background: white;
+    transition: all 0.3s ease;
+  }
+
+  &__type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 15px 30px;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: $grey;
+    background: transparent;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+
+    &::placeholder {
+      opacity: 0;
+      visibility: hidden;
+      color: transparent;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid black;
+
+      & ~ .input__label {
+        top: -9px;
+        left: 40px;
+        z-index: 5;
+        padding: 0 10px;
+        font-size: 12px;
+        color: $grey;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    &:not(:placeholder-shown).input__type {
+      &:not(:focus) {
+        & ~ .input__label {
+          top: -9px;
+          left: 40px;
+          z-index: 9;
+          padding: 0 10px;
+          font-size: 12px;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+//select
+.custom-select {
+  position: relative;
+  font-size: 16px;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  padding: 15px 30px !important;
+  background-color: white;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 22px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: $grey transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent $grey transparent;
+  top: 16px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-selected {
+  color: $grey;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: $grey $grey $grey $grey;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px;
+}
+
+.select-items div {
+  color: $grey;
+  padding: 8px 16px;
+  border: solid transparent;
+  border-width: 0 1px 0 1px;
+  border-color: transparent $grey transparent $grey;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-items div:first-child {
+  color: $grey;
+  padding: 8px 16px;
+  border: solid transparent;
+  border-width: 1px 1px 0 1px;
+  border-color: $grey $grey $grey $grey;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.select-items div:last-child {
+  color: $grey;
+  padding: 8px 16px;
+  border: solid transparent;
+  border-width: 0 1px 1px 1px;
+  border-color: transparent $grey $grey $grey;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0 0 4px 4px;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+//checkbox type
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+input[type=checkbox] + label {
+  display: block;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] {
+  & + label {
+    &:before {
+      content: "\2714";
+      border: 1px solid $black3;
+      border-radius: 4px;
+      display: inline-block;
+      width: 13px;
+      height: 15px;
+      padding: 1px 3px 3px 3px;
+      margin-right: 16px;
+      color: transparent;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:active:before {
+      transform: scale(0);
+    }
+  }
+
+  &:checked {
+    & + label:before {
+      background-color: $footer;
+      border-color: $footer;
+      color: $white;
+    }
+
+    &:disabled + label:before {
+      transform: scale(1);
+      background-color: $white;
+      border-color: $white;
+    }
+  }
+
+  &:disabled + label:before {
+    transform: scale(1);
+    border-color: $checkbox;
+  }
+}
+
+//radio type
+.radiobutton {
+  display: flex;
+  justify-content: space-between;
+
+  &__block {
+    margin-top: 25px;
+    font-size: 14px;
+  }
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 38px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: $footer;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $footer;
+  border-radius: 100%;
+  background: #fff;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: $footer;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
