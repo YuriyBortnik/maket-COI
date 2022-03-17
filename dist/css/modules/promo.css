@@ -1,0 +1,45 @@
+.promo {
+  height: 922px;
+  background: #150433;
+}
+.promo .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.promo__content {
+  width: 40%;
+  color: #FFFFFF;
+}
+.promo__content_title {
+  font-family: "Georgia", sans-serif;
+  font-size: 50px;
+  line-height: 157%;
+}
+.promo__content_text {
+  padding-top: 40px;
+  max-width: 380px;
+  font-size: 25px;
+  line-height: 157%;
+}
+.promo__block {
+  position: relative;
+  width: 60%;
+}
+.promo__block_background {
+  margin: -90px 0 0 auto;
+  width: 350px;
+  height: 516px;
+  background: #F61067;
+}
+.promo__block_img {
+  position: absolute;
+  top: -40px;
+  right: 50px;
+  height: 516px;
+  width: 544px;
+  background: url("/src/assets/images/rectangle.png") no-repeat center;
+}
+.promo .btn-primary {
+  margin-top: 70px;
+}

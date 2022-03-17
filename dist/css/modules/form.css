@@ -1,0 +1,67 @@
+.help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 1160px;
+}
+.help .block1 {
+  position: relative;
+  margin-right: 75px;
+  width: calc(50% + 50px);
+}
+.help .block1__img {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 600px;
+  height: 866px;
+  background: url("/src/assets/images/4man.png") no-repeat center;
+}
+.help .block1__background {
+  width: 350px;
+  height: 870px;
+  background: #F61067;
+}
+.help .block2 {
+  margin-top: 92px;
+  width: calc(50% - 115px);
+}
+.help .block2__help {
+  font-size: 24px;
+  line-height: 37px;
+}
+.help .block2__title {
+  margin-bottom: 28px;
+  width: 400px;
+  font-family: "Georgia", sans-serif;
+  font-size: 50px;
+  line-height: 78px;
+}
+.help .block2__title_color {
+  color: #F61067;
+}
+.help .btn-primary {
+  margin-top: 70px;
+}
+
+.form {
+  width: 444px;
+}
+
+.comment {
+  margin-top: 20px;
+  padding: 20px 30px;
+  width: 100%;
+  height: 178px !important;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #484848;
+  border: 1px solid #484848;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+}
+.comment::placeholder {
+  color: #484848;
+}
